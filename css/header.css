@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+:root {
+    --dark: #323437;
+    --white: #fff;
+    --primaryColor: #FFC100;
+    --black: #000;
+    --blue: #476AD2;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --secondaryBg: var(--dark);
+    --colorHeader: var(--black);
+    --secondaryColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--dark);
+    --secondaryBg: var(--white);
+    --colorHeader: var(--white);
+    --secondaryColor: var(--black);
+}
+
+a{
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 30px; 
+    align-items: center;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#logo-img {
+    width: 75px;
+    height: 75px;
+}
+
+#logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 0px;
+    color: var(--colorHeader);
+}
+
+#logo-text h1 {
+    font-family: "Passion One", sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#logo-text p {
+    font-size: 12px;
+    font-weight: 200;
+    padding-left:2px;
+    letter-spacing: 1px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    margin-right: 50px;
+    font-variant: small-caps;
+}
+
+nav ul li{
+    color: var(--colorHeader);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    transition: border-bottom 0.2s linear;
+}
+
+nav ul li:hover{
+    border-bottom: 1px solid var(--colorHeader);
+}
+
+
+#checkbox {
+    display: none;
+}
+
+.toggle{
+    display: none;
+}
+
+@media(max-width:1050px){
+    body{
+        overflow-x: hidden;
+    }
+    #logo{
+        margin-left: 10px;
+    }
+
+    .ulNav{
+        width: 150px;
+        height: fit-content;
+        top: 90px;
+        right: 70px;
+        background-color: var(--secondaryBg);
+        position: absolute;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        margin-right: 0px;
+        border-radius: 15px 0px 15px 15px;
+        padding: 5px 0px 6px 10px;
+        transition: transform 0s;
+        transform: scale(0%);
+    }
+
+    nav ul li{
+        color: var(--secondaryColor);
+    }
+    
+    .ulNav li:hover {
+        cursor: pointer;
+        border-bottom-color: var(--secondaryColor);
+    }
+    
+    .ulNav.active{
+        transition: transform 0.3s ease;
+        transform: scale(100%);
+    }
+    
+    .toggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition-duration: .3s;
+        z-index: 1000;
+    }
+    
+    .bars {
+        width: 100%;
+        height: 4px;
+        background-color: var(--colorHeader);
+        border-radius: 5px;
+        transition-duration: .3s;
+    }
+    
+    #checkbox:checked + .toggle .bars {
+        margin-left: 13px;  
+    }
+    
+    #checkbox:checked + .toggle #bar2 {
+        transform: rotate(135deg);
+        margin-left: 0;
+        transform-origin: center;
+        transition-duration: .3s;
+    }
+    
+    #checkbox:checked + .toggle #bar1 {
+        transform: rotate(45deg);
+        transition-duration: .3s;
+        transform-origin: left center;
+    }
+    
+    #checkbox:checked + .toggle #bar3 {
+        transform: rotate(-45deg);
+        transition-duration: .3s;
+        transform-origin: left center;
+    }
+}
+
+@media(max-width:500px){
+    #logo-img {
+        width: 65px;
+        height: 65px;
+    }
+    #logo-text h1{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:400px){
+    header{
+        padding-left: 10px;
+        padding-right: 15px;
+    }
+}

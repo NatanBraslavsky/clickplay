@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/jogos/mainJogos.css">
+    <link rel="stylesheet" href="../css/jogos/clicktest.css">
+    <title>ClickPlay</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="dark-theme">
+    <div class="error">
+        <img src="../images/icos/error.png" alt="">
+        <p>Desculpe, estamos trabalhando nisso ainda!</p>
+    </div>
+
+    <header class="header">
+        <a href="../index.html"><img src="../images/icos/return.png" id="return"></a>
+        <a href=""><img src="../images/icos/restart.png" id="reset"></a>
+    </header>
+
+    <!-- !Main -->
+    <main class="main">
+        <div class="telaResultado">
+            <h1 class="seudesempenho">Seu desempenho</h1>
+            <img src="../images/cincoestrelas.png" class="imgEstrela" width="150">
+            <p class="textoMedia">Sua média de cliques foi <span style="font-size: 2em;" class="cps">0</span> CPS</p>
+            <p><strong><span class="qtdCliques">21</span> cliques</strong> em <strong><span class="segundosDesempenho"></span> segundos</strong></p>
+            <div class="fechar">X</div>
+        </div>
+        <div class="container-main">
+            <div id="timer-container">
+                <div id="timer">
+                    <div class="segundosMain">00</div>
+                    :
+                    <div class="mlsegundosMain">00</div>
+                </div>
+                <p>Timer</p>
+            </div>
+            <button id="btn" class="btnClique">Clique rápido!</button>
+            <div class="res-container">
+                <p id="res">0</p>
+                <p>Cliques</p>
+            </div>
+        </div>
+        <div id="mediaClicks">
+            EMPTY
+        </div>
+
+        <div id="radio-container">
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="1">
+                <p>1s</p>
+            </span>
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="5">
+                <p>5s</p>
+            </span>
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="10" checked>
+                <p>10s</p>
+            </span>
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="15">
+                <p>15s</p>
+            </span>
+            <span class="radio-span">
+                <input type="radio" name="segundoOption" class="segundoOption" data-value="30">
+                <p>30s</p>
+            </span>
+        </div>
+    </main>
+
+    <script src="../javascript/clicktest.js"></script>
+</body>
+</html>

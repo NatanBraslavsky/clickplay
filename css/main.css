@@ -1,0 +1,205 @@
+:root {
+    --dark: #323437;
+    --white: #eeeeee;
+    --primaryColor: #FFC100;
+    --black: #000000;
+    --blue: #476AD2;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --color-main: var(--black);
+}
+
+.dark-theme {
+    --bg: var(--dark);
+    --color-main: var(--white);
+}
+
+#tituloJogos{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    color: var(--color-main);
+}
+
+.containerJogos{
+    width: 1400px;
+    height: 350px;
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+}
+
+.containerTextoJogos{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLogoJogos{
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.jogoPalavras{
+    background-image: url(../images/banner-games/palavras.png);
+}
+
+.jogoVelha{
+    background-image: url(../images/banner-games/jogodavelha.webp);
+}
+
+.pedraPapelTesoura{
+    background-image: url(../images/banner-games/jokenpo.png);
+}
+
+.jogoMemoria{
+    background-image: url(../images/banner-games/jogoMemoria.png);
+}
+
+.jogoDigitacao{
+    background-image: url(../images/banner-games/speedtype.png);
+}
+
+.jogoClique{
+    background-image: url(../images/banner-games/clicktest.png);
+}
+
+.containerSecundarioTextoJogos{
+    width: 90%;
+    position: relative;
+}
+
+.containerSecundarioTextoJogos h1{
+    color: var(--color-main);
+    text-align: right;
+    font-size: 35px;
+}
+
+.containerSecundarioTextoJogos p{
+    color: var(--color-main);
+    text-align: right;
+    font-size: 1.2em;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.leftTexto h1{
+    text-align: start;
+}
+
+.leftTexto p{
+    text-align: start;
+}
+
+.btnJogos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 160px;
+    height: 50px;
+    border: 0px;
+    background-color: var(--primaryColor);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.101);
+    transition:  all 0.3s;
+    box-shadow: 0 8px 0 #9d7600;
+}
+
+.btnJogos:active{
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 var(--primaryColor);
+}
+
+.btnStart{
+    position: relative;
+}
+
+.btnJogos:hover{
+    cursor: pointer;
+}
+
+@media(max-width:1470px){
+    .containerJogos{
+        width: 90%;
+        height: 300px;
+    }
+}
+
+@media(max-width:1320px){
+    .containerSecundarioTextoJogos p{
+        font-size: 0.95em;
+    }
+}
+
+@media(max-width:1100px){
+    .containerLogoJogos{
+        width: 500px;
+        height: 45%;
+        order: 1;
+    }
+    .containerTextoJogos{
+        width: 500px;
+        height: 55%;
+        order: 2;
+        align-items: start;
+        justify-content: start;
+        margin-top: 30px;
+    }
+    .containerSecundarioTextoJogos p{
+        text-align: start;
+    }
+
+    .containerSecundarioTextoJogos h1{
+        text-align: start;
+        font-size: 30px;
+    }
+
+    .containerJogos{
+        width: 500px;
+        height: 600px;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+    }
+
+    .btnJogos{
+        position: relative;
+    }
+}
+
+@media(max-width: 590px){
+    .containerJogos{
+        width: 400px;
+        height: 500px;
+    }
+
+    .containerSecundarioTextoJogos h1{
+        font-size: 30px;
+    }
+
+    .containerLogoJogos{
+        height: 40%;
+    }
+
+    .containerTextoJogos{
+        height: 60%;
+        align-items: start;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 450px){
+    .containerJogos{
+        width: 350px;
+    }
+}

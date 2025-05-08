@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/jogos/mainJogos.css">
+    <link rel="stylesheet" href="../css/jogos/palavras.css">
+    <title>ClickPlay</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="dark-theme">
+
+    
+    <div class="error">
+        <img src="../images/icos/error.png" alt="">
+        <p>Não é permitido palavras com menos de 5 letras!</p>
+    </div>
+    
+    <header class="header">
+        <a href="../index.html"><img src="../images/icos/return.png" id="return"></a>
+        <a href=""><img src="../images/icos/restart.png" id="reset"></a>
+    </header>
+    
+    <!-- !Main -->
+    <main>
+        <div class="telaResultado">
+            <h1 class="seudesempenho">Parabéns</h1>
+            <p class="textoResultado">Você acertou a palavra!</p>
+            <div class="fechar">X</div>
+        </div>
+        <h1 style="text-align: center; color: white; font-weight: 100;">Acerte a palavra</h1>
+        <div id="gameContainer">
+
+        </div>
+    </main>
+    
+
+    <script src="../javascript/palavra.js"></script>
+</body>
+</html>
